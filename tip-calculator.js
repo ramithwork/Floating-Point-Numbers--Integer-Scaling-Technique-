@@ -32,15 +32,3 @@ function displayTipAmount(tipAmount) {
     tipAmountDisplay.innerText = `Tip Amount: ${tipAmount.toFixed(2)}` // Displaying the tip amount in 2 decimal places.
 }
 
-function countDecimalPlacesInString(numStr) {
-    const decimalIndex = numStr.indexOf('.');
-    if (decimalIndex === -1) {
-      return 0; // No decimal point
-    }
-    return numStr.length - decimalIndex - 1;
-  }
-  
-  console.log(countDecimalPlacesInString("3.14159"));   // Output: 5
-  console.log(countDecimalPlacesInString("10"));        // Output: 0
-  console.log(countDecimalPlacesInString("-2.718"));  // Output: 3
-  console.log(countDecimalPlacesInString("0.5"));       // Output: 1
