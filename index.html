@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floating-Point Numbers (Integer Scaling Technique)</title>
     <script src="tip-calculator.js" defer></script>
+    <script src="convert-currency.js" defer></script>
 </head>
 <body>
     <h1>Floating-Point Numbers (Integer Scaling Technique)</h1>
@@ -13,10 +14,11 @@
     <h2>Projects</h2>
     <ul>
         <li><a href="#tip-calculator">Tip Calculator</a></li>
+        <li><a href="#currency-converter">Currency Converter</a></li>
     </ul>
     
-
    <hr> 
+
     <h3 id="tip-calculator">Tip Calculator</h3>
     <p><strong>Important Note for Multiplication and Division:</strong> When you multiply two scaled integers, the resulting scale factor is the product of the individual scale factors. If you used the same scale factor for both original numbers, you need to divide the integer result by the square of that scale factor. The same logic applies (in reverse) to division.</p>
     <form id="tip-form">
@@ -30,6 +32,24 @@
     </form>
     <h4>Calculated Tip</h4>
     <p id="tip-amount">0</p>
+
     <hr>
+
+    <h3 id="currency-converter">Currency Converter</h3>
+    <p><strong>Important Note for Multiplication and Division:</strong> When you multiply two scaled integers, the resulting scale factor is the product of the individual scale factors. If you used the same scale factor for both original numbers, you need to divide the integer result by the square of that scale factor. The same logic applies (in reverse) to division.</p>
+    <form id="currency-form">
+        <label for="amount">Amount LKR:</label>
+        <input type="number" id="amount" name="amount" required>
+        <br><br>
+        <label for="exchange-rate">Exchange Rate:</label>
+        <input type="number" id="exchange-rate" name="exchange-rate" value="299.35" required>
+        <br><br>
+        <button type="submit" id="convert-currency">Convert Currency</button>
+    </form>
+    <h4>Converted Amount</h4>
+    <p id="converted-amount">0</p>
+
+    <hr>
+
 </body>
 </html>
