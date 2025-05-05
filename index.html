@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating-Point Numbers (Integer Scaling Technique)</title>
+    <script src="tip-calculator.js" defer></script>
+</head>
+<body>
+    <h1>Floating-Point Numbers (Integer Scaling Technique)</h1>
+    <p>Integer scaling for floating-point calculations in JavaScript involves multiplying decimal numbers by a power of 10 to convert them into integers, performing the arithmetic operations on these integers, and then dividing the result by the same power of 10 (or a related power, especially for multiplication and division) to obtain the accurate decimal result. This technique helps to avoid common floating-point inaccuracies by performing calculations with whole numbers. The scale factor is determined by the maximum number of decimal places present in the numbers involved.</p>
+
+    <h2>Projects</h2>
+    <ul>
+        <li><a href="#tip-calculator">Tip Calculator</a></li>
+    </ul>
+    
+
+   <hr> 
+    <h3 id="tip-calculator">Tip Calculator</h3>
+    <p><strong>Important Note for Multiplication and Division:</strong> When you multiply two scaled integers, the resulting scale factor is the product of the individual scale factors. If you used the same scale factor for both original numbers, you need to divide the integer result by the square of that scale factor. The same logic applies (in reverse) to division.</p>
+    <form id="tip-form">
+        <label for="bill-amount">Bill Amount:</label>
+        <input type="number" id="bill-amount" name="bill-amount" required>
+        <br><br>
+        <label for="tip-percentage">Tip Percentage:</label>
+        <input type="number" id="tip-percentage" name="tip-percentage" required>
+        <br><br>
+        <button type="submit" id="calculate-tip">Calculate Tip</button>
+    </form>
+    <h4>Calculated Tip</h4>
+    <p id="tip-amount">0</p>
+    <hr>
+</body>
+</html>
